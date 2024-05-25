@@ -1,5 +1,6 @@
-const nbRows = 10;
-const nbCols = 10;
+import Snake from "./snake.js";
+const nbRows = 20;
+const nbCols = 20;
 const cellSize = 40;
 
 const grid = Array.from(Array(nbRows), () =>
