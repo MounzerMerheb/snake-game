@@ -1,0 +1,26 @@
+:root{
+  --cols : 10;
+  --cellSize : 5px;
+}
+
+#grid-container{
+  border-collapse: collapse;
+}
+
+.grid-row{
+  display: flex;
+  flex-direction: row;
+  width: calc(var(--cols)*var(--cellSize)) ;
+}
+
+
+.grid-cell{
+
+  display: flex;
+  flex-direction: column;
+  width: var(--cellSize);
+  height: var(--cellSize);
+  background-color:rgba(0, 0, 0, 0.205);
+  border: 2px solid black;
+}
+
