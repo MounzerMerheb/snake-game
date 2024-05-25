@@ -19,6 +19,14 @@ const container = document.getElementById("grid-container");
 
 createGrid();
 placeApple();
+let x = nbCols/2
+let y = nbRows/2
+let snake = new Snake()
+snake.addNode(x,y)
+snake.addNode(x+1,y)
+snake.addNode(x+2,y)
+// updateSnake()
+snake.display()
 
 function createGrid() {
   for (let row = 0; row < nbRows; row++) {
@@ -47,6 +55,14 @@ function placeApple() {
     colApple = random(0, nbCols);
   } while (isArrayIncluded([rowApple, colApple], exclusion));
   updateGrid(rowApple, colApple, 2);
+}
+
+function updateSnake(){
+  let temp = snake.tail
+  while(temp.next != null){
+    console.log(temp.x, temp.y)
+    temp = temp.next
+  }
 }
 
 function random(min, max) {
